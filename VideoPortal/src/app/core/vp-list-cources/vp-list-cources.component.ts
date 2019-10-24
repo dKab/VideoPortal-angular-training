@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'vp-vp-list-cources',
+  selector: 'app-vp-list-cources',
   templateUrl: './vp-list-cources.component.html',
   styleUrls: ['./vp-list-cources.component.css']
 })

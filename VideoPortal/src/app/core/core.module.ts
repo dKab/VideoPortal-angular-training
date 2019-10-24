@@ -7,6 +7,8 @@ import { VpListCourcesComponent } from './vp-list-cources/vp-list-cources.compon
 import { VpCourceComponent } from './vp-cource/vp-cource.component';
 import { VpFooterComponent } from './vp-footer/vp-footer.component';
 import { VpLogoComponent } from './vp-logo/vp-logo.component';
+import { VpIcourse } from './vp-icourse';
+import { VpIuser } from './vp-iuser';
 
 
 
@@ -16,6 +18,10 @@ import { VpLogoComponent } from './vp-logo/vp-logo.component';
     VpCourceComponent, VpFooterComponent, VpLogoComponent],
   imports: [
     CommonModule
+  ],
+  exports: [
+    VpBreadcrumbsComponent, VpCourceComponent, VpFooterComponent, VpHeaderComponent,
+    VpListCourcesComponent, VpLogoComponent, VpSectionComponent
   ]
 })
 export class CoreModule { }

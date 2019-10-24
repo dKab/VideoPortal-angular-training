@@ -1,7 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 
 @Component({
-  selector: 'vp-vp-header',
+  selector: 'app-vp-header',
   templateUrl: './vp-header.component.html',
   styleUrls: ['./vp-header.component.css']
 })
