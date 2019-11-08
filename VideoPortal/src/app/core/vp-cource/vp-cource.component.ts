@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Input } from '@angular/core';
+import { VpIcourse } from '../vp-icourse';
 
 @Component({
   selector: 'app-vp-cource',
@@ -8,7 +9,7 @@ import { Component, OnInit } from '@angular/core';
 export class VpCourceComponent implements OnInit {
 
   constructor() { }
-
+  @Input() course: VpIcourse;
   ngOnInit() {
   }
 

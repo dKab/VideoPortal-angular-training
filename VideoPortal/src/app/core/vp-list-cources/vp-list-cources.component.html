@@ -1,1 +1,13 @@
-<p>vp-list-cources works!</p>
+<div>
+    <app-vp-search-cource></app-vp-search-cource>
+</div>
+<div>
+    <app-vp-add-cource></app-vp-add-cource>
+</div>
+<div>
+        <ul>
+                <li *ngFor="let cource of {{coursesList}}">
+                  <app-vp-cource [cource]={{cource}}></app-vp-cource>
+                </li>
+        </ul>
+</div>
