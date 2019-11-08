@@ -12,9 +12,9 @@ export class VpListCourcesComponent implements OnInit {
 
   constructor() {
     this.coursesList = new Array<VpCourse>(
-      new VpCourse(0, 'Title0', Date.now(), 100, 'Descriptioon'),
-      new VpCourse(1, 'Title1', Date.now(), 101, 'Descriptioon'),
-      new VpCourse(2, 'Title2', Date.now(), 102, 'Descriptioon'),
+      new VpCourse(0, 'Title0', new Date(), 100, 'Descriptioon'),
+      new VpCourse(1, 'Title1', new Date(), 101, 'Descriptioon'),
+      new VpCourse(2, 'Title2', new Date(), 102, 'Descriptioon'),
     );
   }
   coursesList: Array<VpIcourse>;
