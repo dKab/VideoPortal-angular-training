@@ -11,14 +11,19 @@ import { Title } from '@angular/platform-browser';
 export class VpListCourcesComponent implements OnInit {
 
   constructor() {
+
+  }
+  coursesList: Array<VpIcourse>;
+  ngOnInit() {
     this.coursesList = new Array<VpCourse>(
       new VpCourse(0, 'Title0', new Date(), 100, 'Descriptioon'),
       new VpCourse(1, 'Title1', new Date(), 101, 'Descriptioon'),
       new VpCourse(2, 'Title2', new Date(), 102, 'Descriptioon'),
     );
   }
-  coursesList: Array<VpIcourse>;
-  ngOnInit() {
+  deleteCourse(id: number) {
+    console.log('course Id: ' + id);
+    this.coursesList = this.coursesList.filter(c => c.Id !== id);
   }
 
 }

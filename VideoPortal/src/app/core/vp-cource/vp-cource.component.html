@@ -1,9 +1,12 @@
 <div>
     <div>
-        <span>{{course.Title}}</span><span>Duration: {{course.Duration}}</span><span>{{course.CreateDate}}</span><br>
+        <span>{{course.Title}}</span>
+        <span>Duration: {{course.Duration}}</span>
+        <span>{{course.CreateDate}}</span><br>
         <span>{{course.Description}}</span>
     </div>
     <div>
-
+        <button type="button" class="btn btn-primary">Edit</button>
+        <button type="button" class="btn btn-primary" (click)="onDelete()">Delete</button>
     </div>
 </div>

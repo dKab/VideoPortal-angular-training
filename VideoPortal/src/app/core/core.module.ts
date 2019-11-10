@@ -11,13 +11,14 @@ import { VpIcourse } from './vp-icourse';
 import { VpIuser } from './vp-iuser';
 import { VpSearchCourceComponent } from './vp-list-cources/vp-search-cource/vp-search-cource.component';
 import { VpAddCourceComponent } from './vp-list-cources/vp-add-cource/vp-add-cource.component';
+import {VpLoadMoreComponent} from './vp-list-cources/vp-load-more/vp-load-more.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
 
 
 @NgModule({
   declarations: [
     VpHeaderComponent, VpBreadcrumbsComponent, VpSectionComponent, VpListCourcesComponent,
-    VpCourceComponent, VpFooterComponent, VpLogoComponent, VpSearchCourceComponent, VpAddCourceComponent],
+    VpCourceComponent, VpFooterComponent, VpLogoComponent, VpSearchCourceComponent, VpAddCourceComponent, VpLoadMoreComponent],
   imports: [
     CommonModule, NgbModule
   ],
