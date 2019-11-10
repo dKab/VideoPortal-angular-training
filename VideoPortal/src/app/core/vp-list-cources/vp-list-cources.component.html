@@ -5,11 +5,11 @@
     <app-vp-add-cource></app-vp-add-cource>
 </div>
 <div>
-        <ul>
-                <li *ngFor="let course of coursesList">
-                  <app-vp-cource [course]="course" (delete) = "deleteCourse($event)"></app-vp-cource>
-                </li>
-        </ul>
+  <ul>
+    <li *ngFor="let course of coursesList">
+      <app-vp-cource [course]="course" (delete) = "deleteCourse($event)"></app-vp-cource>
+    </li>
+  </ul>
 </div>
 <div>
   <app-vp-load-more></app-vp-load-more>
