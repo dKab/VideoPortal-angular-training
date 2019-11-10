@@ -24,7 +24,7 @@ import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
   ],
   exports: [
     VpBreadcrumbsComponent, VpCourceComponent, VpFooterComponent, VpHeaderComponent,
-    VpListCourcesComponent, VpLogoComponent, VpSectionComponent
+    VpListCourcesComponent, VpLogoComponent, VpSectionComponent, VpSearchCourceComponent, VpAddCourceComponent, VpLoadMoreComponent
   ]
 })
 export class CoreModule { }

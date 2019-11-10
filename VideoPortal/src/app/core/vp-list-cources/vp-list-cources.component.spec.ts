@@ -1,6 +1,11 @@
 import { async, ComponentFixture, TestBed } from '@angular/core/testing';
 
 import { VpListCourcesComponent } from './vp-list-cources.component';
+import { VpSearchCourceComponent } from './vp-search-cource/vp-search-cource.component';
+import { VpAddCourceComponent } from './vp-add-cource/vp-add-cource.component';
+import { VpCourse } from '../vp-course';
+import { VpCourceComponent } from '../vp-cource/vp-cource.component';
+import { VpLoadMoreComponent } from './vp-load-more/vp-load-more.component';
 
 describe('VpListCourcesComponent', () => {
   let component: VpListCourcesComponent;
@@ -8,7 +13,15 @@ describe('VpListCourcesComponent', () => {
 
   beforeEach(async(() => {
     TestBed.configureTestingModule({
-      declarations: [ VpListCourcesComponent ]
+      declarations: [ VpListCourcesComponent, VpSearchCourceComponent, VpAddCourceComponent, VpCourceComponent, VpLoadMoreComponent ],
+      providers: [
+        {
+          provide: VpCourse,
+          useFactory: () => {
+            return new VpCourse(0, 'sadas', new Date(), 100, 'asd');
+          }
+        }
+      ]
     })
     .compileComponents();
   }));
