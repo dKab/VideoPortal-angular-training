@@ -9,6 +9,10 @@ import { VpIcourse } from '../vp-icourse';
 export class VpCourceComponent implements OnInit {
 
   constructor() { }
+  get formattedDate() {
+    var options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return this.course.CreateDate.toLocaleString('EN-US',options);
+  } 
   @Input() course: VpIcourse;
   @Output() delete: EventEmitter<number> = new EventEmitter();
   onDelete() {

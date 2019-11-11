@@ -1,12 +1,15 @@
-<div>
-    <div>
-        <span>{{course.Title}}</span>
-        <span>Duration: {{course.Duration}}</span>
-        <span>{{course.CreateDate}}</span><br>
-        <span>{{course.Description}}</span>
+<div class="Rectangle">
+    <div style="display: inline-block;width: 900px;">
+        <div style="display: inline-block; width: 50%;"><span class="Video-Course-1-Name">{{course.Title}}</span></div>
+        <div style="display: inline-block; width: 25%;"><span class="h-28-min">Duration: {{course.Duration}}</span></div>
+        <div style="display: inline-block; width: 25%;"><span class="-Nov-2018">{{formattedDate}}</span><br></div>
+        <div>
+            <span class="Learn-about-where-yo">{{course.Description}}</span>
+        </div>
+        
     </div>
-    <div>
-        <button type="button" class="btn btn-primary">Edit</button>
-        <button type="button" class="btn btn-primary" (click)="onDelete()">Delete</button>
+    <div style="display: inline-block; width: 200px;">
+        <button type="button" class="Mask btn btn-primary">Edit</button><br>
+        <button type="button" class="Mask btn btn-primary" (click)="onDelete()">Delete</button>
     </div>
 </div>
