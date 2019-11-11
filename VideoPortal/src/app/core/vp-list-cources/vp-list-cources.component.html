@@ -6,11 +6,12 @@
 </div>
 <div>
   <ul>
-    <li *ngFor="let course of coursesList">
+    <li *ngFor="let course of coursesList" style="list-style: none; margin: 0 0 30px 0;">
       <app-vp-cource [course]="course" (delete) = "deleteCourse($event)"></app-vp-cource>
     </li>
+    <li style="list-style: none; margin: 0 0 30px 0;">
+        <app-vp-load-more></app-vp-load-more>
+    </li>
   </ul>
-</div>
-<div>
-  <app-vp-load-more></app-vp-load-more>
+  
 </div>
