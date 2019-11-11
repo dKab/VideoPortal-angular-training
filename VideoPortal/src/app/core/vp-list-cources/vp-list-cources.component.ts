@@ -22,9 +22,9 @@ export class VpListCourcesComponent implements OnInit {
      They\'re published both in course catalogs that outline degree requirements and in course schedules that contain descriptions 
      for all courses offered during a particular semester.`;
     this.coursesList = new Array<VpCourse>(
-      new VpCourse(0, 'Title0', new Date('2019-11-01'), 100, description),
-      new VpCourse(1, 'Title1', new Date('2019-10-01'), 101, description),
-      new VpCourse(2, 'Title2', new Date('2019-12-01'), 102, description),
+      new VpCourse(0, 'Title0', new Date('2019-11-01'), 100, description, false),
+      new VpCourse(1, 'Title1', new Date('2019-10-01'), 101, description, false),
+      new VpCourse(2, 'Title2', new Date('2019-12-01'), 102, description, false),
     );
   }
   deleteCourse(id: number) {

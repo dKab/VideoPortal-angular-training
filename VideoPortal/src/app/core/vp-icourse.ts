@@ -4,4 +4,5 @@ export interface VpIcourse {
     CreateDate: Date;
     Duration: number;
     Description: string;
+    TopRated: boolean;
 }
