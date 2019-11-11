@@ -13,12 +13,13 @@ import { VpSearchCourceComponent } from './vp-list-cources/vp-search-cource/vp-s
 import { VpAddCourceComponent } from './vp-list-cources/vp-add-cource/vp-add-cource.component';
 import {VpLoadMoreComponent} from './vp-list-cources/vp-load-more/vp-load-more.component';
 import {NgbModule} from '@ng-bootstrap/ng-bootstrap';
+import { HighlightBorderDirective } from './vp-cource/highlight-border.directive';
 
 
 @NgModule({
   declarations: [
     VpHeaderComponent, VpBreadcrumbsComponent, VpSectionComponent, VpListCourcesComponent,
-    VpCourceComponent, VpFooterComponent, VpLogoComponent, VpSearchCourceComponent, VpAddCourceComponent, VpLoadMoreComponent],
+    VpCourceComponent, VpFooterComponent, VpLogoComponent, VpSearchCourceComponent, VpAddCourceComponent, VpLoadMoreComponent, HighlightBorderDirective],
   imports: [
     CommonModule, NgbModule
   ],

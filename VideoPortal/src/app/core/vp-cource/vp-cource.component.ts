@@ -10,9 +10,24 @@ export class VpCourceComponent implements OnInit {
 
   constructor() { }
   get formattedDate() {
-    var options = { year: 'numeric', month: 'long', day: 'numeric' };
-    return this.course.CreateDate.toLocaleString('EN-US',options);
-  } 
+    const options = { year: 'numeric', month: 'long', day: 'numeric' };
+    return this.course.CreateDate.toLocaleString('EN-US', options);
+  }
+  get getColor() {
+    const now = new Date();
+    const twoWeeksAgo = new Date(now.getFullYear(), now.getMonth(), now.getDay() - 14);
+    let fresh: boolean;
+    let upcoming: boolean;
+    fresh = (this.course.CreateDate < now) && (this.course.CreateDate >= twoWeeksAgo);
+    upcoming = this.course.CreateDate > now;
+    if (fresh) {
+      return 'green';
+    }
+    if (upcoming) {
+      return 'blue';
+    }
+    return 'default';
+  }
   @Input() course: VpIcourse;
   @Output() delete: EventEmitter<number> = new EventEmitter();
   onDelete() {
