@@ -4,7 +4,7 @@
 <div>
     <app-vp-add-cource></app-vp-add-cource>
 </div>
-<div>
+<div *ngIf = "isCourses">
   <ul>
     <li *ngFor="let course of coursesList" style="list-style: none; margin: 0 0 30px 0;">
       <app-vp-cource [course]="course" (delete) = "deleteCourse($event)"></app-vp-cource>
@@ -12,6 +12,8 @@
     <li style="list-style: none; margin: 0 0 30px 0;">
         <app-vp-load-more></app-vp-load-more>
     </li>
-  </ul>
-  
+  </ul>  
+</div>
+<div  class="nodata" *ngIf = "!isCourses" >
+  <span>No data. Feel free to add new course.</span>
 </div>

@@ -30,6 +30,10 @@ export class VpListCourcesComponent implements OnInit {
   deleteCourse(id: number) {
     console.log('course Id: ' + id);
     this.coursesList = this.coursesList.filter(c => c.Id !== id);
+    console.log('courses amount:', this.coursesList.length);
+  }
+  get isCourses() {
+    return this.coursesList.length > 0 ? true : false;
   }
 
 }
