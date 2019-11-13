@@ -1,17 +1,19 @@
-<div class="Rectangle" *ngIf="course" [appHighlightBorder] = "getColor">
+
+<div class="Rectangle container-fluid" *ngIf="course" [appHighlightBorder] = "getColor">
     <div style="display: inline-block;width: 900px;">
-        <div style="display: inline-block; width: 50%;"><span class="Video-Course-1-Name">{{course.Title}}</span></div>
-        <div style="display: inline-block; width: 25%;"><span class="h-28-min">Duration: {{course.Duration}}</span></div>
-        <div style="display: inline-block; width: 25%;"><span class="-Nov-2018">{{formattedDate}}</span><br></div>
+        <div class="row">
+            <div class="col-6"><span class="Video-Course-1-Name">{{course.Title}}</span></div>
+            <div class="col-auto"><span class="text-muted">{{getDuration}}</span></div>
+            <div class="col-auto"><span class="text-muted">{{formattedDate}}</span><br></div>
+        </div>        
         <div>
             <span class="Learn-about-where-yo">{{course.Description}}</span>
-        </div>
-        
+        </div>        
     </div>
-    <div style="display: inline-block; width: 100px;">
-        <button type="button" class="Mask btn btn-primary">Edit</button><br>
+    <div style="display: inline-block; width: 75px; margin-right: 5px;">
+        <button type="button" class="btn btn-primary">Edit</button><br>
     </div>
-    <div style="display: inline-block; width: 100px;">
-            <button type="button" class="Mask btn btn-primary" (click)="onDelete()">Delete</button>
+    <div style="display: inline-block; width: 75px;">
+        <button type="button" class="btn btn-primary" (click)="onDelete()">Delete</button>
     </div>
 </div>

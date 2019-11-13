@@ -28,6 +28,12 @@ export class VpCourceComponent implements OnInit {
     }
     return 'default';
   }
+  get getDuration() {
+    const strDuration = ((this.course.Duration - this.course.Duration % 60) / 60).toString()
+     + 'h ' + (this.course.Duration % 60).toString() + 'm';
+    return strDuration;
+  }
+
   @Input() course: VpIcourse;
   @Output() delete: EventEmitter<number> = new EventEmitter();
   onDelete() {
