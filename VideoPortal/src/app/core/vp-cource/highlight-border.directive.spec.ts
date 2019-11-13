@@ -3,7 +3,7 @@ import { Component } from '@angular/core';
 import { ComponentFixture, TestBed } from '@angular/core/testing';
 
 @Component({
-  template: '<div HighlightBorderDirective = "color">Test</div>'
+  template: '<div [appHighlightBorder]="color">Test</div>'
 })
 class TestComponent {
   constructor() {}
@@ -29,11 +29,27 @@ describe('HighlightBorderDirective', () => {
     expect(cmp).toBeDefined();
   });
 
-  it('should create an instance', () => {
+  it('should paint border red', () => {
+    cmp.color = 'red';
+    fixture.detectChanges();
     const debugEl: HTMLElement = fixture.debugElement.nativeElement;
     const div: HTMLElement = debugEl.querySelector('div');
+    expect(div.style.borderColor).toBe('red');
+  });
+
+  it('should paint border blue', () => {
     cmp.color = 'blue';
     fixture.detectChanges();
-    expect(div.style.borderColor).toBe(cmp.color);
+    const debugEl: HTMLElement = fixture.debugElement.nativeElement;
+    const div: HTMLElement = debugEl.querySelector('div');
+    expect(div.style.borderColor).toBe('blue');
+  });
+
+  it('should paint border green', () => {
+    cmp.color = 'green';
+    fixture.detectChanges();
+    const debugEl: HTMLElement = fixture.debugElement.nativeElement;
+    const div: HTMLElement = debugEl.querySelector('div');
+    expect(div.style.borderColor).toBe('green');
   });
 });

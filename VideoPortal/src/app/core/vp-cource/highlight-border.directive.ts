@@ -1,4 +1,4 @@
-import { Directive, ElementRef, Input } from '@angular/core';
+import { Directive, ElementRef, Input, SimpleChanges } from '@angular/core';
 import { element } from 'protractor';
 
 @Directive({
